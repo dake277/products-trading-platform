@@ -17,7 +17,7 @@
 
 ### 项目截图
 
-<img src="https://github.com/dake277/products-trading-platform/blob/master/images/index.png" alt="image" style="zoom:33%;" />
+<img src="https://github.com/dake277/products-trading-platform/blob/master/images/index.png" alt="image" style="zoom:10%;" />
 
 ![App Screen Shot](https://github.com/dake277/products-trading-platform/blob/master/images/index.png=100x50)
 
