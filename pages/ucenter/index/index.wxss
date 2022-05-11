@@ -1,0 +1,200 @@
+page{
+    height: 100%;
+    width: 100%;
+    background: #f4f4f4;
+}
+.container{
+    background: #f4f4f4;
+    height: auto;
+    overflow: hidden;
+    width: 100%;
+}
+.profile-info {
+  width: 100%;
+  height: 280rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 30.25rpx;
+  background: #333;
+}
+
+.profile-info .avatar {
+  height: 148rpx;
+  width: 148rpx;
+  border-radius: 50%;
+  border: 4rpx solid #fff;
+}
+
+.profile-info .info {
+  flex: 1;
+  height: 85rpx;
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-info .name {
+  height: 45rpx;
+  line-height: 45rpx;
+  color: #fff;
+  font-size: 37.5rpx;
+}
+
+.profile-info .level {
+  height: 30rpx;
+  line-height: 30rpx;
+  margin-top: 10rpx;
+  color: #7f7f7f;
+  font-size: 30rpx;
+}
+
+.profile-info .btn {
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 10rpx;
+  border-radius: 50%;
+}
+
+.user-menu{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background: #fff;
+}
+
+.user-menu .item{
+    float: left;
+    width: 33.33333%;
+    height: 244.5rpx;
+    border-right: 1px solid rgba(0,0,0,.15);
+    border-bottom: 1px solid rgba(0,0,0,.15);
+    text-align: center;
+}
+
+.user-menu .item .a{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-menu .item.no-border {
+    border-right: 0;
+}
+
+.user-menu .item.item-bottom {
+    border-bottom: none;
+}
+
+.user-menu .icon{
+    margin: 0 auto;
+    display: block;
+    height: 52.803rpx;
+    width: 52.803rpx;
+    margin-bottom: 16rpx;
+}
+
+.user-menu .icon.order{
+    background: url(http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/ucenter-sdf6a55ee56-f2c2b9c2f0.png) 0 -437.5rpx no-repeat;
+    background-size: 52.803rpx;
+}
+
+.user-menu .icon.coupon{
+    background: url(http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/ucenter-sdf6a55ee56-f2c2b9c2f0.png) 0 -62.4997rpx no-repeat;
+    background-size: 52.803rpx;
+}
+
+.user-menu .icon.gift{
+    background: url(http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/ucenter-sdf6a55ee56-f2c2b9c2f0.png) 0 -187.5rpx no-repeat;
+    background-size: 52.803rpx;
+}
+
+.user-menu .icon.address{
+    background: url(http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/ucenter-sdf6a55ee56-f2c2b9c2f0.png) 0 0 no-repeat;
+    background-size: 52.803rpx;
+}
+
+.user-menu .icon.security{
+    background: url("data:image/png;base64,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") 0 -500rpx no-repeat;
+    background-size: 52.803rpx;
+}
+
+.user-menu .icon.kefu{
+    background: url(http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/ucenter-sdf6a55ee56-f2c2b9c2f0.png) 0 -312.5rpx no-repeat;
+    background-size: 52.803rpx;
+}
+
+.user-menu .icon.help{
+    background: url(http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/ucenter-sdf6a55ee56-f2c2b9c2f0.png) 0 -250rpx no-repeat;
+    background-size: 52.803rpx;
+}
+
+.user-menu .icon.feedback{
+    background: url(http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/ucenter-sdf6a55ee56-f2c2b9c2f0.png) 0 -125rpx no-repeat;
+    background-size: 52.803rpx;
+}
+
+
+.user-menu .txt{
+    display: block;
+    height: 24rpx;
+    width: 100%;
+    font-size: 24rpx;
+    color:#333;
+}
+
+.logout{
+    margin-top: 50rpx;
+    height: 101rpx;
+    width: 100%;
+    line-height: 101rpx;
+    text-align: center;
+    background: #fff;
+    color: #333;
+    font-size: 30rpx;
+    bottom: 0;
+    position: fixed;
+
+}
+
+
+.dialog-login{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.dialog-login .dialog-body{
+  width: 540rpx;
+  height: auto;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 5px;
+  padding: 40rpx;
+}
+
+.dialog-login .dialog-body .title{
+  width: 100%;
+  text-align: center;
+  line-height: 60rpx;
+}
+
+.dialog-login .dialog-body .content{
+  width: 100%;
+}
+
+.dialog-login .dialog-body button{
+  margin-top: 30rpx;
+}

@@ -1,0 +1,158 @@
+  .container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 100rpx;
+}
+text, view {
+   font-family: MicroSoft Yahei; 
+   font-size: 30rpx; 
+   color: #262626;
+}
+image{
+  height: 90rpx;
+  width: 90rpx;
+}
+.xl{
+  font-size: 32rpx;
+}
+.sm{
+  font-size: 26rpx;
+}
+.shop-box {
+  background-color: #C91623;
+  padding-left: 20rpx;
+  color: white;
+  padding-top: 40rpx;
+
+}
+.shop-box text { color: white; }
+
+.row-between {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.sm{
+  font-size:26rpx;
+}
+.icon{
+  height: 20px;
+  width:20px;
+  vertical-align: middle;
+}
+.mr20{
+  margin-right: 20rpx;
+  }
+
+  
+/*今日区域*/
+.today-box{
+  background-color: #C91623;
+  padding: 90rpx 0;
+}
+.today-box text { color: white; }
+.today-price-text{
+  font-size: 80rpx;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+}
+.column-center{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.today-kpi-box{
+  
+}
+.row-around{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-around;
+}
+.lg{
+  font-size: 30rpx;
+}
+.mt20{
+  margin-top: 20rpx;
+}
+.vr{
+  width:1px;
+  height: 30rpx;
+  background-color: white;
+}
+
+  .today-kpi-box .column-center{
+    width: 250rpx;
+  }
+
+
+/*统计区域*/
+.count-box{
+  padding: 20rpx 0;
+  font-size: 30rpx;
+  border-bottom: 1px solid #EDEDED;
+}
+.row-around{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-around;
+}
+.bg-white{
+background-color: white;
+}
+.count-item {
+  width: 250rpx;
+  display: flex;
+}
+
+.count-box .vr{
+  width: 1px;
+  height: 100rpx;
+  background-color: #EDEDED;
+}
+
+.count-value{
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+}
+.muted{
+  color:#A3A3A3;
+}
+  /* .count-item{
+   
+  } */
+
+
+/*操作区域*/
+.operation-box{
+  background-color: #FFFCFC;
+  margin-bottom: 20rpx;
+  padding-top:35rpx;
+  padding-bottom: 35rpx;
+  border-bottom: 1px solid #EDEDED;
+}
+
+
+  .hr{
+    height: 40rpx;
+    width: 100%;
+  }
+
+  .operation-row{
+  color: #626E7A;
+  margin-top: 10rpx; 
+  }
+  .tab-border{
+  position: fixed;
+  height: 1px;
+  width: 100%;
+  background-color: #E6E8EB;
+  bottom: 0;
+}

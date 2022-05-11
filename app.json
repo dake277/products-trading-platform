@@ -1,0 +1,104 @@
+{
+  "pages": [
+    
+    "pages/FirstIndex/FirstIndex",
+    "pages/userInfo/userInfo",
+    "pages/userDetail/userDetail",
+    "pages/ucenter/InfoDetail/InfoDetail",
+    "pages/ucenter/userPassword/userPassword",
+    "pages/noFinishOrder/noFinishOrder",
+    "pages/signup/signup",
+    "pages/buyerEdit/buyerEdit",
+    "pages/managerRefund/managerRefund",
+    "pages/refundDetail/refundDetail",
+    "pages/refundResult/refundResult",
+    "pages/buyerOrderDetail/buyerOrderDetail",
+    "pages/buyergoodsManager/buyergoodsManager",
+     "pages/addgoods/addgoods",
+    "pages/showEchart/showEchart",
+    "pages/cart/cart",
+    "pages/managerIndex/managerIndex",
+    "pages/ucenter/index/index",
+    "pages/ucenter/refund/refund",
+    "pages/catalog/catalog",
+    "pages/selectUser/selectUser",
+    "pages/index/index",
+    "pages/newGoods/newGoods",
+    
+    "pages/ucenter/address/address",
+    "pages/ucenter/addressAdd/addressAdd",
+    "pages/ucenter/footprint/footprint",
+    "pages/ucenter/order/order",
+    "pages/ucenter/orderDetail/orderDetail",
+    
+    
+   
+    "pages/ucenter/collect/collect",
+    "pages/auth/login/login",
+    "pages/auth/register/register",
+    "pages/auth/reset/reset",
+    "pages/pay/pay",
+    "pages/payResult/payResult",
+    "pages/shopping/addressAdd/addressAdd",
+    
+    "pages/comment/comment",
+    "pages/commentPost/commentPost",
+    
+    
+    "pages/search/search",
+    "pages/category/category",
+    
+    "pages/shopping/checkout/checkout",
+    "pages/shopping/address/address",
+    
+    "pages/goods/goods"
+   
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "测试",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "backgroundColor": "#fafafa",
+    "borderStyle": "white",
+    "selectedColor": "#b4282d",
+    "color": "#666",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/images/ic_menu_choice_nor.png",
+        "selectedIconPath": "static/images/ic_menu_choice_pressed.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/catalog/catalog",
+        "iconPath": "static/images/ic_menu_sort_nor.png",
+        "selectedIconPath": "static/images/ic_menu_sort_pressed.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "iconPath": "static/images/ic_menu_shoping_nor.png",
+        "selectedIconPath": "static/images/ic_menu_shoping_pressed.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/ucenter/index/index",
+        "iconPath": "static/images/ic_menu_me_nor.png",
+        "selectedIconPath": "static/images/ic_menu_me_pressed.png",
+        "text": "我的"
+      }
+     
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
+}

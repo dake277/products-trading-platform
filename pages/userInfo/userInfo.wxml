@@ -1,0 +1,48 @@
+
+  <view class="userContainer">
+    
+
+    <block wx:for="{{userlist}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+      <view class="list" bindtap="toUserInfo" data-userid="{{item.id}}">
+        
+  <!--客户基本信息-->
+  <view class="customer-info-box-row-between">
+    <!--左侧头像-->
+    <image class="customer-avatar" src="/static/images/customer.png"/>
+    <!--右侧主区域-->
+    <view class="column-customer-main-box">
+      <!--姓名-->
+      <view class="row-between-name">
+        <view class="row-name">
+          <text class="xxl-mr20-user-name-box">{{item.nickName ? item.nickName : '微信用户'}}</text>
+          <!-- <image class="icon-mr10" src="{{item.level}}"/>
+          <image class="icon-mr10" src="{{item.bound}}"/> -->
+        </view>
+      </view>
+      <view class="row-name">
+        <text class="muted">注册时间：</text>
+        <text class="muted">{{item.createTime}}</text>
+      </view>
+    </view>
+    <!--更多地址-->
+    <image class="icon" src="/static/images/address_right.png"/>
+  </view>
+
+      </view>
+    </block>
+
+    <!-- 加载提示 -->
+    
+  <!--加载提示-->
+  <!-- <view class="weui-loadmore"  wx:if="{{$Loadmore$page.loading}}">
+    <view class="weui-loading"/>
+    <view class="weui-loadmore__tips">正在加载</view>
+  </view> -->
+
+ 
+
+
+
+   
+
+  </view>

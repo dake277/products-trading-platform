@@ -1,0 +1,87 @@
+.Container{
+display: flex;
+flex-direction: column;
+box-sizing: border-box;
+
+height: 1170rpx;
+width:100%;
+margin: 0 auto;
+}
+
+ec-canvas {
+width: 100%;
+height: 450rpx;
+}
+/* Tab标签 */
+.title {
+  width: 100%;
+  height: 130rpx;
+  background: white;
+  display: flex;
+  
+  align-items: center;
+  justify-content: space-around;
+}
+.title-sel {
+  color: #24272c;
+  font-size: 30rpx;
+  line-height: 75rpx;
+
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+  align-items: center;
+}
+.title-sel.active{
+  color: #ab2b2b;
+  font-size: 35rpx;
+  border-bottom: 6rpx solid #ab2b2b;
+
+}
+.echart{
+  height: 650rpx;
+  width: 100%;
+  margin-top:35rpx; 
+}
+/*今日区域*/
+.today-box{
+  background-color: #C91623;
+  padding: 40rpx 0;
+}
+.today-box text { color: white; }
+text.xl { font-size: 32rpx; }
+.today-price-text{
+  font-size: 100rpx;
+  margin-top: 15rpx;
+  margin-bottom: 20rpx;
+}
+.column-center{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.today-kpi-box{
+  
+}
+.row-around{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-around;
+}
+.lg{
+  font-size: 30rpx;
+}
+.mt20{
+  margin-top: 20rpx;
+}
+.vr{
+  width:1px;
+  height: 30rpx;
+  background-color: white;
+}
+
+  .today-kpi-box .column-center{
+    width: 250rpx;
+  }

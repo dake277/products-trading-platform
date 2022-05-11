@@ -1,0 +1,117 @@
+<view class="container">
+  <!-- <swiper class="goodsimgs" indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+    <swiper-item wx:for="{{gallery}}" wx:key="{{item.id}}">
+      <image class="goodsimgs" src="{{goods.url}}" background-size="cover"></image>
+    </swiper-item>
+  </swiper> -->
+  <image class="goodsimgs" src="{{goods.url}}" background-size="cover"></image>
+  <view class="service-policy">
+    <view class="item">30天无忧退货</view>
+    <view class="item">48小时快速退款</view>
+    <view class="item">满88元免邮费</view>
+  </view>
+  <view class="goods-info">
+    <view class="c">
+      <text class="name">{{goods.productName}}</text>
+      <text class="desc">{{goods.depict}}</text>
+      <text class="price">￥{{goods.price}}</text>
+      <!-- <view class="brand" wx:if="{{brand.name}}">
+        <navigator url="../brandDetail/brandDetail?id={{brand.brandId}}">
+          <text>{{brand.name}}</text>
+        </navigator>
+      </view> -->
+    </view>
+  </view>
+  <view class="section-nav section-attr" bindtap="switchAttrPop">
+    <view class="t">请选择规格数量</view>
+    <image class="i" src="../../static/images/address_right.png" background-size="cover"></image>
+  </view>
+  
+  
+
+
+  <view class="common-problem">
+    <view class="h">
+      <view class="line"></view>
+      <text class="title">常见问题</text>
+    </view>
+    <view class="b">
+      <view class="item" >
+
+        <view class="question-box">
+          <text class="spot"></text>
+          <text class="question">购买运费如何收取？</text>
+        </view>
+        <view class="answer">
+          单笔订单金额（不含运费）满88元免邮费；不满88元，每单收取10元运费。(港澳台地区需满)
+        </view>
+
+        <view class="question-box">
+          <text class="spot"></text>
+          <text class="question">使用什么快递发货？</text>
+        </view>
+        <view class="answer">
+          默认使用顺丰快递发货（个别商品使用其他快递），配送范围覆盖全国大部分地区（港澳台地区除
+        </view>
+
+        <view class="question-box">
+          <text class="spot"></text>
+          <text class="question">使用什么快递发货？</text>
+        </view>
+        <view class="answer">
+          默认使用顺丰快递发货（个别商品使用其他快递），配送范围覆盖全国大部分地区（港澳台地区除)
+        </view>
+
+      
+       </view>
+    </view>
+  </view>
+
+  
+</view>
+<view class="attr-pop-box" hidden="{{!openAttr}}">
+  <view class="attr-pop">
+    <view class="close" bindtap="closeAttr">
+      <image class="icon" src="/static/images/icon_close.png"></image>
+    </view>
+    <view class="img-info">
+      <image class="img" src="{{goods.url}}"></image>
+      <view class="info">
+        <view class="c">
+          <view class="p">价格：￥{{goods.price}}</view>
+          <view class="a" >已选择：{{number}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="spec-con">
+      <!-- <view class="spec-item" wx:for="{{specificationList}}" wx:key="{{item.specification_id}}">
+        <view class="name">{{item.name}}</view>
+        <view class="values">
+          <view class="value {{vitem.checked ? 'selected' : ''}}" bindtap="clickSkuValue" wx:for="{{item.valueList}}" wx:for-item="vitem" wx:key="{{vitem.id}}" data-value-id="{{vitem.id}}" data-name-id="{{vitem.specification_id}}">{{vitem.value}}</view>
+        </view>
+      </view> -->
+
+      <view class="number-item">
+        <view class="name">数量</view>
+        <view class="selnum">
+          <view class="cut" bindtap="cutNumber">-</view>
+          <input value="{{number}}" class="number" disabled="true" type="number" />
+          <view class="add" bindtap="addNumber">+</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="bottom-btn">
+  <view class="l l-collect" bindtap="addCannelCollect">
+    <image class="icon" src="{{ collectBackImage }}"></image>
+  </view>
+  <view class="l l-cart">
+    <view class="box">
+      <text class="cart-count">{{cartGoodsCount}}</text>
+      <image bindtap="openCartPage" class="icon" src="/static/images/ic_menu_shoping_nor.png"></image>
+    </view>
+  </view>
+  <view class="c" bindtap="NavToOrder">立即购买</view>
+  <view class="r" bindtap="addToCart">加入购物车</view>
+</view>

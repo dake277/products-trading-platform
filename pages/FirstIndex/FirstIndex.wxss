@@ -1,0 +1,168 @@
+
+
+.entrance {
+  height: 100%;
+  
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+} 
+.select_background{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 300rpx;
+  /* background-image:linear-gradient(#FFFF00, #FFD700); */
+  align-items: center;
+}
+.selectbutton2{
+   width: 90%;
+   line-height:100rpx;
+   margin-top: 50rpx;
+   height: 98rpx;
+   border-radius: 10rpx;
+   font-size: 40rpx;
+   font-weight:lighter;
+   opacity: 0;
+   position: absolute;
+
+}
+.selectbutton{
+   width: 80rpx;
+   height: 80rpx;
+   border-radius: 50%;
+   font-size: 40rpx;
+   font-weight:lighter;
+   margin-left: 336rpx;
+   margin-top: -78rpx;
+   opacity: 0;
+   position: absolute;
+
+}
+.brand_img{
+ width: 125rpx;
+ height: 125rpx;
+ /* border-radius: 50%; */
+ margin-top: 100rpx;
+}
+
+.select_background .brand_text{
+  margin-top: 50rpx;
+  font-size: 35rpx;
+  font-weight: bolder;
+  margin: 0 auto;
+  padding-top: 35rpx;
+
+}
+.form{
+  margin-top: 40rpx;
+  width: 600rpx;
+}
+.inputtext{
+  font-family: MicroSoft Yahei;
+  /* font-size: 28rpx; */
+  color: #262626;
+  padding-right: 22rpx;
+  margin-right: 22rpx;
+  border-right:  1px inset #d8d8d8;
+   width: 120rpx
+}
+
+.input_area{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+.input{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 30rpx;
+  padding-top: 40rpx;
+  font-size: 35rpx;
+  /* line-height: 50rpx; */
+  border-bottom: 1px inset #d8d8d8;
+}
+.line{
+  padding-top: 150rpx;
+  width: 50%;
+  margin: 0 auto;
+  border-bottom: 1px inset #d8d8d8;
+}
+.buttom{
+  
+  height: 200rpx;
+}
+.other{
+position: absolute;
+margin-top: -20rpx;
+margin-left: 288rpx;
+background-color: white;
+padding-left: 20rpx;
+padding-right: 20rpx;
+font-size: 30rpx;
+
+}
+.other_login{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background-color: #04BE02;
+  margin-left: 337rpx;
+  margin-top: 30rpx;
+
+}
+.weixin_login{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 250rpx;
+  
+}
+.getcode{
+  color: #808080;
+  font-size: 30rpx;
+}
+.getcode.active{
+  color: #C91623;
+}
+.signup {
+color: #C91623;
+text-align: right;
+margin-top: 15rpx;
+
+}
+
+.weixin{
+position: absolute;
+ margin-top: 66rpx;
+ width: 64rpx;
+ height: 64rpx;
+ margin-left: -180rpx;
+}
+.weixin2{
+position: absolute;
+margin-top: -68rpx;
+width: 64rpx;
+height: 64rpx;
+margin-left: 344rpx;
+
+}
+.create_button{
+  width: 90%;
+  line-height:100rpx;
+  margin-top: 50rpx;
+  height: 98rpx;
+  border-radius: 10rpx;
+  font-size: 35rpx;
+  font-family: 宋体;
+  letter-spacing:2px;
+  text-align: center;
+  border: 1px solid #eee;
+  /* background-color: #FFCA00; */
+  background-color:#C91623;
+  color: white;
+}

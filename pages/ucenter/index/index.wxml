@@ -1,0 +1,61 @@
+<view class="container">
+  <view class="profile-info">
+    <image  class="avatar" src="/static/images/customer.png"></image>
+    <view class="info">
+      <text class='name'>{{userInfo.nickName}}</text>
+      <!-- <text class='level' bindtap='onUserInfoClick'></text> -->
+    </view>
+    <image  class='btn' src='/static/images/address_right.png'></image>
+  </view>
+
+  <view class="user-menu">
+    <view class="item">
+      <navigator url="/pages/ucenter/order/order" class="a">
+        <text class="icon order"></text>
+        <text class="txt">我的订单</text>
+      </navigator>
+    </view>
+   
+    <view class="item">
+      <navigator url="/pages/ucenter/collect/collect" class="a">
+        <text class="icon address"></text>
+        <text class="txt">我的收藏</text>
+      </navigator>
+    </view>
+    
+    <view class="item">
+      <navigator url="/pages/shopping/address/address" class="a">
+        <text class="icon address"></text>
+        <text class="txt">地址管理</text>
+      </navigator>
+    </view>
+    <view class="item item-bottom">
+      <navigator url="/pages/refundResult/refundResult" class="a">
+        <!-- <text class="icon security"></text> -->
+        <image class="icon security" src="/static/images/refund3.png"></image>
+        <text class="txt">退款管理</text>
+      </navigator>
+    </view>
+    <view class="item item-bottom">
+      <navigator url="/pages/ucenter/InfoDetail/InfoDetail" class="a">
+        <image class="icon security" src="/static/images/info1.png"></image>
+        <text class="txt">个人信息</text>
+      </navigator>
+    </view>
+    <view class="item item-bottom">
+      <navigator url="/pages/ucenter/userPassword/userPassword" class="a">
+        <image class="icon security" src="/static/images/password.png"></image>
+        <text class="txt">修改密码</text>
+      </navigator>
+    </view>
+    <!-- <view class="item item-bottom">
+      <navigator url="/pages/ucenter/feedback/feedback" class="a">
+        <text class="icon feedback"></text>
+        <text class="txt">意见反馈</text>
+      </navigator>
+    </view> -->
+  </view>
+
+  <view class="logout"   bindtap="exitLogin">退出登录</view>
+</view>
+

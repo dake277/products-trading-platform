@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    
+    "component_managerorder": "/pages/component/managerorder/managerorder",
+    "component_my": "/pages/component/my/my",
+   
+    "component_work":"/pages/component/work/work"
+  },
+  "navigationBarTitleText": "订单管理",
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#C91623",
+  "enablePullDownRefresh": true
+}

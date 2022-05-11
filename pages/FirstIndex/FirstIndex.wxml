@@ -1,0 +1,31 @@
+
+<view class="entrance">
+  <view class="select_background">
+    <image src="/static/images/icon_shop.png" class="brand_img"></image>
+    <text class="brand_text">农产品交易平台</text>
+  </view>
+    <!--Tab布局-->
+    <view class="input_area">
+      <form bindsubmit="confirm" class="form">
+        <view class="input">
+          <view class="inputtext">手机号</view>
+          <input class="phoneinput" name="phone" type="number"  maxlength="11" placeholder="请输入手机号"></input>
+          <!-- <view class="getcode {{ phone ? 'active' : ''}} ">注册账号</view> -->
+        </view>
+
+         <view class="input">
+          <view class="inputtext">密码</view>
+          <input class="codeinput" name="password"  type="number" password="true"  placeholder="请输入密码"></input>
+        </view>
+        <view class="signup" bindtap="signup">注册账号</view>
+        <view class="weixin_login">
+            
+            <text class="create_button">确定</text>
+            <button   class="selectbutton2" form-type="submit">
+            </button>
+        </view>
+      </form>
+    </view>
+   
+    
+</view>

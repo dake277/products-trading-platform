@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="pay-result">
+    <view class="success" wx:if="{{status==1}}">
+      <view class="msg">添加商品成功</view>
+      <view class="btns">
+        <navigator class="btn" url="/pages/buyergoodsManager/buyergoodsManager" open-type="navigateBack" delta='2'>查看商品</navigator>
+        <navigator class="btn" url="/pages/managerorder/managerorder" open-type="reLaunch">返回首页</navigator>
+      </view>
+    </view>
+    <view class="error" wx:if="{{status==0}}">
+      <view class="msg">添加失败</view>
+      
+      <view class="btns">
+        <navigator class="btn" url="/pages/buyergoodsManager/buyergoodsManager" open-type="navigateTo">查看商品</navigator>
+        <navigator class="btn" url="/pages/addgoods/addgoods" open-type="reLaunch">重新添加</navigator>
+      </view>
+    </view>
+  </view>
+
+</view>

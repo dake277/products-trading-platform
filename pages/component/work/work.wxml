@@ -1,0 +1,109 @@
+<view class="container">
+  <view class="shop-box row-between">
+    <text class="sm">南阳农产品交易平台</text>
+    <image class="icon mr20" bindtap="service" src="/static/images/customer_service.png"/>
+  </view>
+  <!--今日统计区域-->
+  <view class="today-box">
+    <view class="column-center" >
+      <text class="xl">总付款金额(元)</text>
+      <text class="today-price-text">{{saleCount}}</text>
+    </view>
+
+    <view class="today-kpi-box row-around">
+      <!-- <navigator class="column-center" url="../customer/visitor">
+        <text>浏览人数</text>
+        <text class="lg mt20">11</text>
+      </navigator> -->
+      <!-- <view class="vr"/> -->
+      <view class="column-center">
+        <text>付款订单数</text>
+        <text class="lg mt20">{{orderCount}}</text>
+      </view>
+      <view class="vr"/>
+      <view class="column-center">
+        <text>付款件数</text>
+        <text class="lg mt20">{{goodsCount}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!--其他统计区域-->
+  <!--TODO 目前是外卖模板-->
+  <view>
+    <view class="count-box row-around bg-white">
+      <navigator class="count-item column-center"   bindtap="order('2')" open-type="switchTab" url="../order/index">
+        <text class="count-value">{{orderCount}}</text>
+        <text class="muted">本月订单数</text>
+      </navigator>
+      <view class="vr"/>
+      <navigator class="count-item column-center"   bindtap="order('9')" open-type="switchTab" url="../order/index">
+        <text class="count-value">{{noFinnishCount}}</text>
+        <text class="muted">待发货订单</text>
+      </navigator>
+      <view class="vr"/>
+      <navigator class="count-item column-center"   bindtap="order('3')"            open-type="switchTab" url="../order/index">
+        <text class="count-value">{{UserListcount}}</text>
+        <text class="muted">用户人数</text>
+      </navigator>
+      <view class="vr"/>
+      <!--<navigator class="count-item column-center" @tap="order('5')" open-type="switchTab" url="../order/index">-->
+        <!--<text class="count-value">{{order.n5}}</text>-->
+        <!--<text class="muted">待退款订单</text>-->
+      <!--</navigator>-->
+    </view>
+    <!-- <view class="count-box row-around bg-white">
+      <view class="count-item column-center">
+        <text class="count-value">{{orderCount}}</text>
+        <text class="muted">本月订单数</text>
+      </view>
+      <view class="vr"/>
+      <view class="count-item column-center">
+        <text class="count-value">￥{{saleCount}}</text>
+        <text class="muted">本月成交额</text>
+      </view>
+      <view class="vr"/>
+      <navigator class="count-item column-center" url="../customer/visitor">
+        <text class="count-value">11</text>
+        <text class="muted">本月浏览数</text>
+      </navigator>
+    </view> -->
+  </view>
+
+  <!--操作区域-->
+  <view class="operation-box">
+    <view class="operation-row row-around" >
+      <navigator class="column-center" url="/pages/buyerEdit/buyerEdit">
+        <image src="/static/images/shop.png"/>
+        <text>店铺管理</text>
+      </navigator>
+      <navigator class="column-center" url="../../pages/buyergoodsManager/buyergoodsManager">
+        <image src="/static/images/cart.png"/>
+        <text>商品管理</text>
+      </navigator>
+      <view class="column-center" bindtap="switchOrderTab" >
+        <image src="/static/images/order.png"/>
+        <text>订单管理</text>
+      </view>
+    </view>
+
+    <view class="hr"></view>
+
+    <view class="row-around">
+      <navigator class="operation-row column-center" url="../managerRefund/managerRefund">
+        <image src="/static/images/manRefund.png"/>
+        <text>退货管理</text>
+      </navigator>
+      <navigator class="operation-row column-center" url="../showEchart/showEchart">
+        <image src="/static/images/chart.png"/>
+        <text>图表展示</text>
+      </navigator>
+      <navigator class="operation-row column-center" url="../userInfo/userInfo">
+        <image src="/static/images/customer.png"/>
+        <text>用户管理</text>
+      </navigator>
+    </view>
+  </view>
+</view>
+
+

@@ -1,0 +1,71 @@
+<view class="container">
+  <!-- 导航栏 -->
+  <view class='title'>
+        <view class="title-sel {{0 == topIndex ? 'active':''}}" bindtap="titleClick" data-idx='0'>
+          <view class="in-title">
+             出售中
+          </view>
+        </view>
+        <view class="title-sel {{1 == topIndex ? 'active':''}}" bindtap="titleClick" data-idx='1'>
+          <view class="in-title">
+             售罄的 
+          </view>
+        </view>
+        <view class="title-sel {{2 == topIndex ? 'active':''}}" bindtap="titleClick" data-idx='2'>
+          <view class="in-title">
+            仓库中 
+          </view>
+        </view>
+  </view>
+
+  <view class="catalog">
+    <scroll-view class="nav" scroll-y="true">
+    
+
+         <view class="item {{ currentIndex == 1 ? 'active' : ''}}"  data-id='1'    bindtap="switchCate">蔬菜</view>
+         <view class="item {{ currentIndex == 2 ? 'active' : ''}}"  data-id='2'    bindtap="switchCate">水果</view>
+         <view class="item {{ currentIndex == 3 ? 'active' : ''}}"  data-id='3'    bindtap="switchCate">畜牧</view>
+         <view class="item {{ currentIndex == 4 ? 'active' : ''}}"  data-id='4'    bindtap="switchCate">水产品</view>
+        
+    </scroll-view>
+    <scroll-view class="cate" scroll-y="true">
+        <view class="bd" >
+          <view   wx:for="{{lastList}}">
+                
+                    
+            <view class="item-box"  data-com-index="{{index}}" data-wpyedit-a="{{item.id}}">
+            <view class="goods-box">
+              <image class="goods-image" src="{{item.url}}"/>
+              <view class="info-box">
+                <view class="title-box">
+                  <text class="info-box-title">{{item.productName}}</text>
+                </view>
+                <view class="price-box">
+                  <text class="major-lg">¥{{item.price}}</text>
+                  
+                </view>
+              </view>
+            </view>
+            <view class="row-between-mt10">
+              <text class="muted-mr20-xs">库存：{{item.count}}</text>
+              
+            </view>
+        </view>
+
+                
+         </view>
+        </view>
+    </scroll-view>
+
+    <view class="buttom-tap">
+      
+      <navigator open-type="navigateBack" delta='1' class="buttom-tap-left" >
+        返回         
+      </navigator>
+      <navigator url="/pages/addgoods/addgoods" class="buttom-tap-right" >
+        新增商品        
+      </navigator>
+    </view>
+  </view>
+
+</view>

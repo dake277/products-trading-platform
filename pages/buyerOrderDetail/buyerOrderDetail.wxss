@@ -1,0 +1,247 @@
+
+.contain{
+  display: flex;
+justify-content: center;
+flex-direction: column;
+padding-bottom: 110rpx;
+}
+view{
+box-sizing:content-box;
+padding: 0;
+margin: 0;
+}
+/* 状态栏 */
+.order-status-bar {
+background-color: #FFF;
+height: 70rpx;
+padding: 40rpx 30rpx;
+border-bottom: 1px solid #EDEDED;
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+.icon-lg {
+height: 30px;
+width: 30px;
+vertical-align: middle;
+}
+.status-box-column{
+  margin-left: 30rpx;
+  display: flex;
+ justify-content: center;
+ flex-direction: column;
+}
+text.xxl {
+font-size: 34rpx;
+}
+.muted-mt10{
+  color: #A3A3A3;
+  margin-top: 10rpx;
+}
+/* 物流栏（电商） */
+.order-trace-bar{
+  padding: 25rpx;
+background-color: #FFF;
+border-bottom: 1px solid #EDEDED;
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+.order-trace-bar .icon{
+  height: 20px;
+width: 20px;
+vertical-align: middle;
+margin-left: 10rpx;
+}
+.info-box-column{
+  width: 600rpx;
+margin-left: 20rpx;
+display: flex;
+justify-content: center;
+flex-direction: column;
+}
+text.inline {
+text-overflow: ellipsis;
+word-break: keep-all;
+white-space: nowrap;
+overflow: hidden;
+}
+.address-box-row{
+  padding: 25rpx 20rpx 25rpx 0;
+background-color: #FFF;
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+.address-box .icon-box {
+width: 80rpx;
+text-align: center;
+}
+.icon-lg-address {
+height: 30px;
+width: 30px;
+vertical-align: middle;
+margin-left: 20rpx;
+margin-right: 15rpx;
+}
+.info-box-column-icon{
+  width: 600rpx;
+flex: 1;
+display: flex;
+justify-content: center;
+flex-direction: column;
+}
+.row-between{
+  display: flex;
+flex-direction: row;
+align-items: center;
+}
+.row-icon{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.row-between .icon{
+  height: 20px;
+width: 20px;
+vertical-align: middle;
+}
+text.primary {
+color: #C91623;
+margin-left: 10rpx;
+}
+.mt10 {
+  margin-top: 10rpx;
+}
+.hr-address {
+width: 100%;
+height: 5px;
+margin-bottom: 15rpx;
+}
+/* 订单内容 */
+.order-item-container-column{
+margin-bottom: 0;
+border-top: 1px solid #EDEDED;
+border-bottom: 1px solid #EDEDED;
+background-color: #FFF;
+}
+.order-header-container{
+  padding: 10rpx 25rpx 10rpx 20rpx;
+}
+.order-header-container .row-between {
+justify-content: space-between;
+}
+.user-info-container .icon{
+  height: 20px;
+width: 20px;
+vertical-align: middle;
+}
+.sm-10{
+  font-size: 26rpx;
+margin-left: 10rpx;
+}
+.sm-primary{
+  font-size: 26rpx;
+color: #C91623;
+}
+.info-container-row-between{
+  justify-content: space-between;
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+.goods-container-row-between{
+  background-color: #FAFAFA;
+padding: 10rpx 20rpx 15rpx 25rpx;
+justify-content: space-between;
+}
+.goods-image {
+width: 150rpx;
+height: 150rpx;
+}
+.goods-title-container-column{
+  flex: 1;
+height: 100%;
+padding-left: 28rpx;
+display: flex;
+justify-content: center;
+flex-direction: column;
+}
+.goods-buy-container-column{
+  text-align: right;
+display: flex;
+justify-content: center;
+flex-direction: column;
+}
+.goods-buy-container-column .muted{
+  color: #A3A3A3;
+}
+.hr {
+width: 100%;
+height: 6rpx;
+}
+.footer-container-row-end{
+  padding-left: 25rpx;
+padding-right: 20rpx;
+height: 70rpx;
+justify-content: flex-end;
+}
+.footer-container-row-end .mr20 {
+margin-right: 20rpx;
+}
+.major-xl-mr20{
+  font-size: 32rpx;
+  color: #FF6200;
+  margin-right: 20rpx;
+}
+
+/* 信息面板 */
+.weui-cells.infoweui{
+  border-top: none;
+  margin-top: 0;
+  border-bottom: 1px solid #EDEDED;
+}
+.panel-summary-box-mb20{
+  background: #fff;
+border-top: 1px solid #EDEDED;
+border-bottom: 1px solid #EDEDED;
+margin-top: 10rpx;
+overflow: hidden;
+padding: 10px 15px;
+margin-bottom: 20rpx;
+}
+.price-box-row-between{
+  padding: 5rpx 0;
+justify-content: space-between;
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+.price-box-row-between .major{
+  color: #FF6200;
+
+}
+.price-hr{
+border-top: 1px solid #EDEDED;
+width: 100%;
+}
+.final-box{
+  float: right;
+width: 100%;
+padding-top: 10rpx;
+text-align: right;
+}
+.lg-muted{
+  font-size: 30rpx;
+color: #A3A3A3;
+}
+.final-box .lg{
+  font-size: 30rpx;
+}
+.final-box .lg-major{
+  font-size: 30rpx;
+color: #FF6200;
+
+}

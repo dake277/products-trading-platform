@@ -1,0 +1,59 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="search">
+    <navigator url="/pages/search/search" class="input">
+      <image class="icon"></image>
+      <text class="txt">商品搜索</text>
+    </navigator>
+  </view>
+  <swiper class="banner" indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+    <!-- <swiper-item wx:for="{{banner}}" wx:key="{{item.id}}">
+      <navigator url="{{item.link}}">
+        <image src="{{item.image_url}}" background-size="cover"></image>
+      </navigator>
+    </swiper-item> -->
+    <swiper-item >
+      <navigator >
+        <image src="/static/shop_images/banner.jpg" background-size="cover"></image>
+      </navigator>
+    </swiper-item>
+    <swiper-item >
+      <navigator >
+        <image src="/static/shop_images/banner1.jpg" background-size="cover"></image>
+      </navigator>
+    </swiper-item>
+    <swiper-item >
+      <navigator >
+        <image src="/static/shop_images/banner.jpg" background-size="cover"></image>
+      </navigator>
+    </swiper-item>
+  </swiper>
+  <!-- <view class="m-menu">
+    <navigator class="item" url="{{item.url}}" wx:for="{{channel}}" wx:key="{{item.id}}">
+      <image src="{{item.icon_url}}" background-size="cover"></image>
+      <text>{{item.name}}</text>
+    </navigator>
+  </view> -->
+  <view class="m-menu">
+    
+      <text>热销商品</text>
+   
+  </view>
+  <view class="good-grid" >
+    <!-- <view class="h">
+      <view>
+        <text>{{item.name}}</text>
+      </view>
+    </view> -->
+    <view class="b">
+      <block wx:for="{{floorGoods}}" wx:for-index="index" wx:for-item="iitem" wx:key="{{iitem.id}}">
+        <navigator url="../goods/goods?id={{iitem.id}}" class="item">
+          <!-- <image class="img" src="/static/shop_images/{{iitem.productName}}.jpg" background-size="cover"></image> -->
+          <image class="img" src="{{iitem.url}}" background-size="cover"></image>
+          <view class="name">{{iitem.productName}}</view>
+          <view class="price">￥{{iitem.price}}</view>
+        </navigator>
+      </block>
+    </view>
+  </view>
+</view>

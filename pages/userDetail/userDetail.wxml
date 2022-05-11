@@ -1,0 +1,91 @@
+
+  
+  <view class="weui-toptips weui-toptips_warn"  ></view>
+
+  <view>
+    
+
+
+
+
+
+    <view class="hr"/>
+    <form bindsubmit="save">
+
+      <!--店铺名称-->
+      <!-- <view class="name-box row-center">
+        <image class="icon-xl" src="{{shop.avatar}}" bindtap="avatar"/>
+        <input class="shop-name" name="name" placeholder="请输入店铺名称" value="{{shop.name}}"/>
+      </view> -->
+
+      <view class="hr"/>
+
+      <view class="weui-cells weui-cells-form">
+
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label-80">姓名</view>
+          </view>
+          <view class="weui-cell__bd">
+            <view class="weui-input">
+            {{userDetail[0].realName}}
+            </view>
+          </view>
+
+          <view class="weui-cell__ft">
+          </view>
+        </view>
+
+        
+
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label-80">店铺地址</view>
+          </view>
+          <view class="weui-cell__bd">
+            <view class="weui-input" >
+            {{userDetail[0].address}}
+            </view>
+          </view>
+          <view class="weui-cell__ft">
+          </view>
+        </view>
+
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label-80">联系电话</view>
+          </view>
+          <view class="weui-cell__bd">
+            <view class="weui-input" >
+            {{userDetail[0].userName}}
+            </view>
+          </view>
+          <view class="weui-cell__ft">
+          </view>
+        </view>
+
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label-80">邮箱地址</view>
+          </view>
+          <view class="weui-cell__bd">
+            <view class="weui-input" >
+            {{userDetail[0].email}}
+            </view>
+          </view>
+          <view class="weui-cell__ft">
+          </view>
+        </view>
+
+      </view>
+
+      <view class="weui-cells weui-cells-form">
+
+               
+      </view>
+      <view class="mt10"/>
+      
+    </form>
+
+
+  </view>

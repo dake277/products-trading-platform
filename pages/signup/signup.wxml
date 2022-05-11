@@ -1,0 +1,177 @@
+
+<view>
+  <view class="hr"/>
+    <form bindsubmit="save">
+
+      <!--店铺名称-->
+      <!-- <view class="name-box row-center">
+        <image class="icon-xl" src="{{shop.avatar}}" bindtap="avatar"/>
+        <input class="shop-name" name="name" placeholder="请输入店铺名称" value="{{shop.name}}"/>
+      </view> -->
+
+      <view class="hr"/>
+
+      <view class="weui-cells weui-cells-form">
+
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label-80">手机号</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" name="userName"  placeholder="请输入电话号码"/>
+          </view>
+          <view class="weui-cell__ft">
+          </view>
+        </view>
+
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label-80">密码</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" name="password" password="true" placeholder="请输入密码"/>
+          </view>
+          <view class="weui-cell__ft">
+          </view>
+        </view>
+
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label-80">确认密码</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" name="password2" password="true" placeholder="请确认密码"/>
+          </view>
+          <view class="weui-cell__ft">
+          </view>
+        </view>
+
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label-80">昵称</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" name="nickName"  placeholder="请输入昵称"/>
+          </view>
+          <view class="weui-cell__ft">
+          </view>
+        </view>
+
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label-80">真实姓名</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" name="realName"  placeholder="请输入姓名"/>
+          </view>
+          <view class="weui-cell__ft">
+          </view>
+        </view>
+
+        <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-label-80" >所在地址</view>
+          <view catchtap="chooseLocation" style="min-width: 500rpx;">
+            <view class="weui-cell-center">{{Location}}</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access" style="margin-bottom: 12rpx;"></view>
+          </view>
+        </view>
+
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label-80">详细地址</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" name="address" value="{{addressDetail}}" placeholder="详细地址"/>
+          </view>
+          <view class="weui-cell__ft">
+          </view>
+        </view>
+
+        
+
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label-80">邮箱地址</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" name="email" value="{{buyerInfo[0].email}}" placeholder="请输入邮箱"/>
+          </view>
+          <view class="weui-cell__ft">
+          </view>
+        </view>
+
+      </view>
+
+      <view class="weui-cells weui-cells-form">
+
+        <!-- <view class="weui-cell">
+          <view class="weui-cell__bd">用户类型</view>
+          <view class="weui-cell__ft" bindtap="show">{{buyerInfo[0].role.roleName}}</view>
+        </view> -->
+
+        <!-- <view class="weui-cell weui-cell_switch" wx:if="{{versions != 'extension' && versions != 'vip'}}">
+          <view class="weui-cell__bd">自动接单</view>
+          <view class="weui-cell__ft">
+            <switch checked="{{shop.autoOrder}}" name="autoOrder"/>
+          </view>
+        </view> -->
+        <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="showInner">
+                <view class="weui-cell__bd">账号类型</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">{{List[currentValue]=='' ? '请选择账号类型' : List[currentValue]}}</view>
+            </view>
+
+      </view>
+      <view class="mt10"/>
+   
+
+      <view class="zan-panel">
+        <view class="zan-btns">
+          <button class="zan-btn zan-btn--fill" form-type="submit">注册</button>
+        </view>
+      </view>
+    </form>
+</view>
+
+<!-- 分类 -->
+  
+  <!--遮罩层-->
+  <view class="slider-panel-cover"  wx:if="{{SliderPaneldisplay == 'true'}}" bindtap="SliderPanelclose"> </view>
+
+  <!--滑动面板-->
+  <view class="slider-panel-box {{SliderPaneldisplay == 'true' ? 'slider-panel-show' : '' }} " style="min-height: {{SliderPanelminHeight}}">
+    <!--面板标题-->
+    <view class="header-box">
+      <!--标题槽位-->
+      <view class="title-box">
+        <view>商品分类</view>
+      </view>
+
+      <!--关闭按钮-->
+      <view class="close-box">
+        <image class="close-box-icon" bindtap="SliderPanelclose" src="/static/images/close.png"/>
+      </view>
+    </view>
+
+    <!--内容槽位-->
+    <scroll-view scroll-y="true" class="content-box" style="background-color:#F8F8F8;">
+      <view class="weui-cells-form">
+      <radio-group id="inner" key="" bindchange="radio" bindtap="selectInner">
+        <label class="weui-cell weui-check__label" >
+          <radio class="weui-check" value="2" checked="{{currentValue == 2}}"/>
+          <view class="weui-cell__bd">商户</view>
+          <view class="weui-cell__ft-my weui-cell__ft_in-radio" wx:if="{{currentValue == 2}}">
+            <icon class="weui-icon-radio" type="success_no_circle" size="16"/>
+          </view>
+        </label>
+
+        <label class="weui-cell weui-check__label"  >
+          <radio class="weui-check" value="3" checked="{{currentValue == 3}}"/>
+          <view class="weui-cell__bd">用户</view>
+          <view class="weui-cell__ft-my weui-cell__ft_in-radio" wx:if="{{currentValue == 3}}">
+            <icon class="weui-icon-radio" type="success_no_circle" size="16"/>
+          </view>
+        </label>
+      </radio-group>
+      </view>
+    </scroll-view>
+  </view>

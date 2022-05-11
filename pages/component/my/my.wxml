@@ -1,0 +1,36 @@
+
+<view class="entrance">
+  <view class="select_background">
+    <image src="/static/images/icon_shop.png" class="brand_img"></image>
+    <text class="brand_text">{{userInfo.nickName}}</text>
+  </view>
+  <view class="list">
+        <view class="weui-cells weui-cells_after-title">
+            <!-- <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">营业状态</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">营业中</view>
+            </navigator> -->
+            <!-- <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">店铺公告</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator> -->
+             <navigator url="/pages/buyerEdit/buyerEdit" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">店铺信息</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+             <navigator url="/pages/noFinishOrder/noFinishOrder" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">配送管理</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+             <navigator url="/pages/ucenter/userPassword/userPassword" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">修改密码</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+            <view bindtap="loginOut" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">退出登录</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </view>
+          
+        </view>
+  </view>
+</view>

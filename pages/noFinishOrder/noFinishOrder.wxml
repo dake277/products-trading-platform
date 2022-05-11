@@ -1,0 +1,42 @@
+<view class="container" >
+   
+    <!-- 订单列表 -->
+
+    <navigator  bindtap="navDetail" class="order"  wx:for="{{orderList}}" wx:key="{{item.id}}" data-id="{{index}}">
+            <view class="h">
+              <view class="order-header-container">
+                <view class="user-info-container">
+                  <image class="user-info-icon" src="../../static/images/idcard.png"/>
+                  <text class="sm ml10">{{item.buyerName}}</text>
+                </view>
+                <view>
+                  <text class="sm primary">已支付</text>
+                  
+                </view>
+              </view>
+
+              <view class="order-info-container">
+                <text class="infotext">{{item.createTime}}</text>
+                <text class="infotext">{{item.id}}</text>
+              </view>  
+            </view>
+
+            <view class="goods" >
+                <view class="img">
+                    <image src="{{item.url}}"></image>
+                </view>
+                <view class="info">
+                    <text class="name">{{item.orderName}}</text>
+                    <text class="number">共{{item.count}}件商品</text>
+                </view>
+                <view class="status"></view>
+            </view>
+            <view class="b">
+                <view class="l">实付：￥{{item.total}}</view>
+              <view class="r">
+                    <button class="btn" data-order-index="{{index}}" catchtap="fininshOrder" wx:if="{{item.isAddress==0}}">发货</button>
+                </view>
+            </view>
+        </navigator>
+  
+</view>

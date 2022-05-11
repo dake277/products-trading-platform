@@ -1,0 +1,59 @@
+<view class="container">
+    <view class="order-info">
+        <view class="item-a">下单时间：{{orderInfo.createTime}}</view>
+        <view class="item-b">订单编号：{{orderInfo.id}}</view>
+        <view class="item-c">
+            <view class="l">实付：<text class="cost">￥{{orderInfo.total}}</text></view>
+            <view class="r">
+                <!-- <view class="btn" bindtap="cancelOrder">取消订单</view>
+                <view class="btn active" bindtap="payOrder">去付款</view> -->
+            </view>
+        </view>
+    </view>
+
+    <view class="order-goods">
+        <view class="h">
+            <view class="label">商品信息</view>
+            <view class="status">{{orderInfo.orderName}}</view>
+        </view>
+        <view class="goods">
+            <view class="item" >
+                <view class="img">
+                    <image src="{{orderInfo.url}}"></image>
+                </view>
+                <view class="info">
+                    <view class="t">
+                        <text class="name">{{orderInfo.orderName}}</text>
+                        <text class="number">x{{orderInfo.count}}</text>
+                    </view>
+                    
+                    <view class="price">￥{{orderInfo.price}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="order-bottom">
+        <view class="address">
+            <view class="t">
+                
+                <text class="mobile">{{orderInfo.buyerNumber}}</text>
+            </view>
+            <view class="b">{{orderInfo.buyerName}}</view>
+        </view>
+        <view class="total">
+            <view class="t">
+                <text class="label">商品合计：</text>
+                <text class="txt">￥{{orderInfo.total}}</text>
+            </view>
+            <view class="t">
+                <text class="label">运费：</text>
+                <text class="txt">￥10</text>
+            </view>
+        </view>
+        <view class="pay-fee">
+            <text class="label">实付：</text>
+            <text class="txt">￥{{orderInfo.total+10}}</text>
+        </view>
+    </view>
+</view>

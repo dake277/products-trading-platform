@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="collect-list">
+    <view class="item" bindtap="openGoods"  bindtouchstart="touchStart" bindtouchend="touchEnd" wx:for="{{collectList}}" wx:key="{{item.id}}" data-index="{{index}}">
+      <image class="img" src="{{item.url}}"></image>
+      <view class="info">
+        <view class="name">{{item.productName}}</view>
+        <view class="subtitle">{{item.depict}}</view>
+        <view class="price">￥{{item.price}}</view>
+      </view>
+    </view>
+  </view>
+</view>

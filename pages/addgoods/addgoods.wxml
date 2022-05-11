@@ -1,0 +1,153 @@
+  <view class="Container"  >
+    <form bindsubmit="submit">
+      <!--照片上传区域-->
+      
+  <!-- 照片区域 -->
+  <view class="photo-box" bindtap="imageUploader" wx:if="{{tempFilePaths.length <1}}"  >
+    <image class="photo-btn " src="/static/images/camare1.png"/>
+    <text class="mt10">点击添加图片</text>
+  </view>
+
+  
+  <!-- 照片区域 -->
+  <view class="swiper-box"  wx:if="{{tempFilePaths.length >0}}" >
+    <view class="picture-swiper" indicator-dots="true" indicator-active-color="#EEE">
+      
+        <image mode="aspectFit" src="{{tempFilePaths}}"/>
+     
+    </view>
+    <image class="photo-btn-new"  bindtap="imageUploader" src="/static/images/camare1.png"/>
+  </view>
+
+  
+
+        <view class="weui-cell ">
+          <view class="weui-cell__hd">
+            <view class="weui-label">商品标题</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" id="price" type="text" bindblur="inputproductName"  placeholder="请填写商品标题"  />
+          </view>
+          <view class="weui-cell__ft">
+          </view>
+        </view>
+
+
+      <!-- 标题区域 -->
+      
+
+      
+
+    
+  <view class="sku-box-row-mt10">
+    <view class="info-box">
+      <view class="weui-cells-form">
+        <view class="weui-cells-form">
+        <view class="weui-cell">
+          <view class="weui-cell__bd">
+            <input class="weui-textarea" id="name" bindblur="inputDepict" value="{{inputInfo.productName}}" placeholder="请输入商品详情"  maxlength="30"/>
+          </view>
+         </view>
+         </view>
+        
+
+        <view class="weui-cell ">
+          <view class="weui-cell__hd">
+            <view class="weui-label">价格</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" id="price" type="digit" bindblur="inputPrice"  placeholder="请填写商品价格" />
+          </view>
+          <view class="weui-cell__ft">
+            元/斤
+          </view>
+        </view>
+        <view class="weui-cell ">
+          <view class="weui-cell__hd">
+            <view class="weui-label">库存</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" id="stock" type="number" bindblur="inputCount" value="{{SkuListitem.stock}}" placeholder="请填写商品库存"/>
+          </view>
+          <view class="weui-cell__ft">
+          件
+          </view>
+        </view>
+      </view>
+    </view>
+
+    
+  </view>
+
+  <!-- </block> -->
+      <!-- 其他详细信息 -->
+      <view class="detail-box">
+        <view class="weui-cells-form">
+
+          <!-- <view class="weui-cell" bindtap="showInner">
+            <view class="weui-cell__hd">
+              <view class="weui-label">商品分类</view>
+            </view>
+            <view class="weui-cell__bd">
+              {{input.inner ? input.inner : '请选择商品分类'}}
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"/>
+          </view> -->
+          <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="showInner">
+                <view class="weui-cell__bd">商品分类</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">{{currentValue=='' ? '请选择商品分类' : currentValue}}</view>
+            </view>
+
+          
+        </view>
+      </view>
+      <!--操作栏-->
+      
+  <view class="main-container">
+    <view class="zan-panel">
+      <view class="zan-btns">
+        <button class="zan-btn zan-btn--fill" bindtap='submitInfo'>保存</button>
+        
+      </view>
+    </view>
+  </view>
+
+    </form>
+  </view>
+
+  <!-- 分类 -->
+  
+  <!--遮罩层-->
+  <view class="slider-panel-cover"  wx:if="{{SliderPaneldisplay == 'true'}}" bindtap="SliderPanelclose"> </view>
+
+  <!--滑动面板-->
+  <view class="slider-panel-box {{SliderPaneldisplay == 'true' ? 'slider-panel-show' : '' }} " >
+    <!--面板标题-->
+    <view class="header-box">
+      <!--标题槽位-->
+      <view class="title-box">
+        <view>商品分类</view>
+      </view>
+
+      <!--关闭按钮-->
+      <view class="close-box">
+        <image class="close-box-icon" bindtap="SliderPanelclose" src="/static/images/close.png"/>
+      </view>
+    </view>
+
+    <!--内容槽位-->
+    <scroll-view scroll-y="true" class="content-box" style="background-color:#F8F8F8;">
+      <view class="weui-cells-form">
+      <radio-group id="inner" key="" bindchange="radio" bindtap="selectInner">
+        <label class="weui-cell weui-check__label"  wx:for="{{innerCategories}}" wx:key="value">
+          <radio class="weui-check" value="{{item.id}}" checked="{{currentValue == item.name}}"/>
+          <view class="weui-cell__bd">{{item.name}}</view>
+          <view class="weui-cell__ft-my weui-cell__ft_in-radio" wx:if="{{currentValue == item.name}}">
+            <icon class="weui-icon-radio" type="success_no_circle" size="16"/>
+          </view>
+        </label>
+      </radio-group>
+      </view>
+    </scroll-view>
+  </view>
+  

@@ -1,0 +1,105 @@
+<!--pages/ucenter/refund/refund.wxml-->
+<view class="container">
+  <view class="order-goods">
+      <view class="h">
+          <view class="label">商品信息</view>
+          <view class="status">待发货</view>
+      </view>
+      <view class="goods">
+          <view class="item" >
+              <view class="img">
+                  <image src="{{refundGood.url}}"></image>
+              </view>
+              <view class="info">
+                  <view class="t">
+                      <text class="name">{{refundGood.orderName}}</text>
+                      <text class="number">x{{refundGood.count}}</text>
+                  </view>
+                  <view class="attr">{{refundGood.goods_specifition_name_value}}</view>
+                  <view class="price">￥{{refundGood.total}}</view>
+              </view>
+          </view>
+      </view>
+  </view>
+  
+  <view class="sku-box-row-mt10">
+    <view class="info-box">
+
+      <view class="weui-cell " style="border-bottom: 1px solid #d9d9d9">
+              <view class="weui-cell__hd">
+                <view class="weui-label">退款原因</view>
+              </view>
+              <view class="weui-cell__bd">
+                {{refundGood.text}}
+              </view>
+              <!-- <view class="weui-cell__ft">
+              件
+              </view> -->
+        
+      </view> 
+
+       <!-- <view class="weui-cell ">
+              <view class="weui-cell__hd">
+                <view class="weui-label">退款金额</view>
+              </view>
+              <view class="weui-cell__bd">
+                10
+              </view>
+              <view class="weui-cell__ft">
+              元
+              </view>
+        
+      </view> -->
+
+        <!-- <view class="weui-cell " style="border-bottom: 1px solid #d9d9d9">
+              <view class="weui-cell__hd">
+                <view class="weui-label">退款说明</view>
+              </view>
+              <view class="weui-cell__bd">
+                <input class="weui-input" id="stock"  bindblur="inputDetail" placeholder="请填写退款说明"  />
+              </view>
+              <view class="weui-cell__ft">
+              件
+              </view> 
+        
+      </view>    -->
+
+      <view class="order-box">
+        <view class="order-item">
+            <view class="l">
+                <text class="name">商品退款</text>
+            </view>
+            <view class="r">
+                <text class="txt">￥{{refundGood.total}}</text>
+            </view>
+        </view>
+        <view class="order-item">
+            <view class="l">
+                <text class="name">运费</text>
+            </view>
+            <view class="r">
+                <text class="txt">￥10</text>
+            </view>
+        </view>
+        <view class="order-item no-border">
+            <view class="l">
+                <text class="name">退费合计</text>
+            </view>
+            <view class="r">
+                <text class="txt">￥{{refundGood.total+10}}</text>
+            </view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+  <view class="main-container">
+    <view class="zan-panel">
+      <view class="zan-btns">
+        <button class="zan-btn zan-btn--fill" bindtap='submitRefund'>同意退款</button>
+      </view>
+    </view>
+  </view>
+
+</view>

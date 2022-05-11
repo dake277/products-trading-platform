@@ -1,0 +1,55 @@
+<!-- <view class="entrance">
+  <view class="select_background">
+    <image src="/static/images/icon_shop.png" class="brand_img"></image>
+    <text class="brand_text">交易平台</text>
+  </view>
+  <button class="selectbutton" type="primary"  bindtap="navigateToConsumer">用户/个体使用</button>
+  <button class="selectbutton2" type="primary"  bindtap="navigateToConsumer">商家端</button>
+  <view>
+  
+  </view>
+  
+</view> -->
+<view class="entrance">
+  <view class="select_background">
+    <image src="/static/images/icon_shop.png" class="brand_img"></image>
+    <text class="brand_text">农产品交易平台</text>
+  </view>
+  <view class="SwitchCard">
+    <scroll-view  >
+      <!--Tab布局-->
+      <view class='title'>
+        <view class="title-sel {{0 == currentIndex ? 'active':''}}" bindtap="titleClick" data-idx='0'>用户              </view>
+        <view class="title-sel {{1 == currentIndex ? 'active':''}}" bindtap="titleClick" data-idx='1'>商家              </view>
+      </view>
+      
+      <swiper class="swiper" bindchange="pagechange" current='{{currentIndex}}'>
+        <swiper-item class="swiper">
+          <view class="input_area">
+            <image src="/static/images/icon-shop.png" class="login_image_user"                   ></image>
+            <text class="text_login">请登录账号</text>
+            <view class="weixin_login">
+                <image src="/static/images/weixin3.png"class="weixin"></image>
+                <text class="create_button">微信授权登录</text>
+                <button   class="selectbutton2" bindtap="navigateToConsumer">
+                </button>
+            </view>
+          </view>
+        </swiper-item>
+         <swiper-item class="swiper">
+         <view class="input_area">
+            <image src="/static/images/icon-index-login.png" class="login_image"                   ></image>
+            <text class="text_login">请登录账号</text>
+            <view class="weixin_login">
+                <image src="/static/images/weixin3.png"class="weixin"></image>
+                <text class="create_button">微信授权登录</text>
+                <button   class="selectbutton2" bindtap="navigateToManager">
+                </button>
+            </view>
+          </view>
+        </swiper-item>
+      </swiper>
+    </scroll-view>
+  </view>
+  
+</view>

@@ -1,0 +1,35 @@
+
+  <view class="Container"  background-size:cover>
+  <!--今日统计区域-->
+  <view class="today-box">
+    <view class="column-center">
+      <text class="xl">本月收益(元)</text>
+      <text class="today-price-text">{{Monthsale}}</text>
+    </view>
+
+    <view class="today-kpi-box row-around">
+      <view class="column-center">
+        <text>累计销售额(元)</text>
+        <text class="lg mt20">{{saleCount}}</text>
+      </view>
+      
+      <view class="column-center">
+        <text>累计订单(笔)</text>
+        <text class="lg mt20">{{totalorderCount}}</text>
+      </view>
+    </view>
+  </view>
+
+    
+      <!--Tab布局-->
+      <view class='title'>
+        <view class="title-sel {{0 == currentIndex ? 'active':''}}" bindtap="titleClick" data-idx='0'>折线图 </view>
+        <view class="title-sel {{1 == currentIndex ? 'active':''}}" bindtap="titleClick" data-idx='1'>饼状图</view>
+      </view>
+    <view class="echart">
+     <ec-canvas id="mychart-dom-line" canvas-id="mychart-bar" ec="{{ec}}" wx:if="{{currentIndex==0}}"></ec-canvas>
+     <ec-canvas id="mychart-dom-line" canvas-id="mychart-bar" ec="{{ec1}}" wx:if="{{currentIndex==1}}"></ec-canvas>
+    </view>
+   
+  </view>
+

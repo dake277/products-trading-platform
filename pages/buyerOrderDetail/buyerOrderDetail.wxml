@@ -1,0 +1,162 @@
+
+  <view class="contain">
+    <!--状态栏-->
+    <view class="order-status-bar">
+      <image class="icon-lg" src="/static/images/success{{result.isAddress}}.png" />
+      <view class="status-box-column">
+        <text class="xxl">{{result.isAddress==0?'待发货':'交易成功'}}</text>
+        <!-- 订单文本描述/需要抽取到Service中 -->
+        <text class="muted-mt10">{{result.isAddress==0?'等待卖家发货':'交易已完成，卖家已收到您的货款'}}</text>
+      </view>
+    </view>
+
+    <!--物流栏（电商）-->
+    <block >
+      <view class="order-trace-bar" >
+        <image class="icon" src="/static/images/car2.png"/>
+        <view class="info-box-column">
+          <text class="inline">{{innerTrans[result.transportation-1].name}}快递</text>
+          <!-- <text class="muted sm mt10" wx:if="{{express.timestape}}">{{express.timestape}}</text> -->
+        </view>
+        <!-- <image class="icon" wx:if="{{express.timestape}}" src="/images/icons/more-gray.png"/> -->
+      </view>
+    </block>
+
+    
+
+<view >
+      <!--地址展现-->
+  <!-- <block >     -->
+  <view class="address-box-row" >
+    <!--左侧图标-->
+    <view class="icon-box">
+      <image class="icon-lg-address" src="/static/images/dizhi.png"/>
+    </view>
+    <!-- 地址内容 -->
+    <view class="info-box-column-icon">
+      <view class="row-icon">
+        <text>收货人：{{result.buyerName}} </text>
+        <view class="row-between" >
+          <image class="icon" src="/static/images/phone.png"/>
+          <text class="primary">{{result.buyerNumber}}</text>
+        </view>
+      </view>
+      <view class="mt10">
+        <text>地址：{{result.userAddress}} </text>
+      </view>
+    </view>
+  </view>
+  <image class="hr-address" src="/static/images/address-hr.png"/>
+
+  <!-- </block> -->
+</view>
+    <!--订单项目-->
+    
+  <view class="order-item-container-column">
+    <!--基本信息-->
+    <view class="order-header-container">
+
+      <view class="row-between">
+        <view class="user-info-container">
+          <image class="icon" src="/static/images/idcard.png"/>
+          <text class="sm-10">{{result.sellerName}}</text>
+        </view>
+        <view>
+          <text class="sm-primary">{{result.isAddress==0?'待发货':'交易成功'}}</text>
+        </view>
+      </view>
+
+      <view class="info-container-row-between">
+        <text>{{result.createTime}}</text>
+        <text>{{result.id}}</text>
+      </view>
+    </view>
+
+    <!--商品区域-->
+
+    <view class="order-goods-list-container" >
+      <block >
+      <view>
+                
+        <view class="goods-container-row-between">
+            <!--商品图片-->
+            <image class="goods-image" mode="aspectFill" src="{{result.url}}"/>
+
+            <!--商品说明-->
+            <view class="goods-title-container-column">
+              <text>{{result.createTime}}</text>
+              
+            </view>
+
+            <!--商品购买信息-->
+            <view class="goods-buy-container-column">
+              <text>￥{{result.price}}</text>
+              <text class="muted">x{{result.count}}</text>
+            </view>
+        </view>
+
+        <view class="hr"></view>
+      </view>
+      </block>
+    </view>
+    <!--汇总信息-->
+    <view class="footer-container-row-end">
+      <text class="mr20">共{{result.count}}件商品</text>
+      <text>合计:</text>
+      <text class="major-xl-mr20">￥{{result.total}}</text>
+      <!-- <text>(含运费￥10)</text> -->
+    </view>
+
+    
+
+  </view>
+
+
+    <!--订单详情-->
+    <view class="weui-cells infoweui">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">支付方式</view>
+        <view class="weui-cell__ft">在线支付</view>
+      </view>
+      <view class="weui-cell" >
+        <view class="weui-cell__bd">配送方式</view>
+        <view class="weui-cell__ft">{{innerTrans[result.transportation-1].name}}</view>
+      </view>
+      <!-- <view class="weui-cell">
+        <view class="weui-cell__bd">买家留言</view>
+        <view class="weui-cell__ft">{{order.message ? order.message : '无'}}</view>
+      </view> -->
+    </view>
+
+    <!--信息汇总-->
+    <view class="panel-summary-box-mb20">
+      <view class="price-box-row-between">
+        <text>商品金额</text>
+        <text class="major">￥{{result.total}}</text>
+      </view>
+      <view class="price-box-row-between">
+        <text>运费</text>
+        <text class="major">+￥10</text>
+      </view>
+      <view class="price-box row-between" wx:if="{{order.couponPrice > 0}}">
+        <text>优惠券</text>
+        <text class="major">-￥{{order.couponPrice}}</text>
+      </view>
+      <view class="price-box row-between" wx:if="{{order.bonusPrice > 0}}">
+        <text>积分抵扣</text>
+        <text class="major">-￥{{order.bonusPrice}}</text>
+      </view>
+      <view class="price-hr"/>
+      <view class="final-box" wx:if="{{order.orderPriceHistory.length > 0}}">
+        <text class="lg muted">原价：</text>
+        <text class="lg muted">￥{{originPrice}}</text>
+      </view>
+      <view class="final-box">
+        <text class="lg">实付款：</text>
+        <text class="lg-major">￥{{result.total+10}}</text>
+      </view>
+    </view>
+
+    <!--操作栏-->
+    
+  </view>
