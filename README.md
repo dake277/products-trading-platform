@@ -17,7 +17,8 @@
 
 ### 项目截图
 
-[首页](https://github.com/dake277/products-trading-platform/blob/master/images/index.png)
+![首页](https://github.com/dake277/products-trading-platform/blob/master/images/index.png)
+*首页截图*
 
 ![专题](http://upload-images.jianshu.io/upload_images/3985656-bd606aac3b5491c2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/320)
 
