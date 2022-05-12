@@ -18,14 +18,14 @@
 ### 项目截图
 
 <img src="https://github.com/dake277/products-trading-platform/blob/master/images/index.png" alt="image" width="300" height="300" />
-<img src="https://github.com/dake277/products-trading-platform/blob/master/images/cart.png" alt="image" width="300" height="300" />
-<img src="https://github.com/dake277/products-trading-platform/blob/master/images/detail.png" alt="image" width="300" height="300" />
-<img src="https://github.com/dake277/products-trading-platform/blob/master/images/oreder.png" alt="image" width="300" height="300" />
-<img src="https://github.com/dake277/products-trading-platform/blob/master/images/work.png" alt="image" width="300" height="300" />
-<img src="https://github.com/dake277/products-trading-platform/blob/master/images/oreder-shop.png" alt="image" width="300" height="300" />
-<img src="https://github.com/dake277/products-trading-platform/blob/master/images/refund.png" alt="image" width="300" height="300" />
-<img src="https://github.com/dake277/products-trading-platform/blob/master/images/echarts.png" alt="image" width="300" height="300" />
-![App Screen Shot](https://github.com/dake277/products-trading-platform/blob/master/images/index.png=100x50)
+<img src="https://github.com/dake277/products-trading-platform/blob/master/images/cart.png" alt="image" width="300" height="400" />
+<img src="https://github.com/dake277/products-trading-platform/blob/master/images/detail.png" alt="image" width="300" height="400" />
+<img src="https://github.com/dake277/products-trading-platform/blob/master/images/order.png" alt="image" width="300" height="400" />
+<img src="https://github.com/dake277/products-trading-platform/blob/master/images/work.png" alt="image" width="300" height="400" />
+<img src="https://github.com/dake277/products-trading-platform/blob/master/images/order-shop.png" alt="image" width="300" height="400" />
+<img src="https://github.com/dake277/products-trading-platform/blob/master/images/refund.png" alt="image" width="300" height="400" />
+<img src="https://github.com/dake277/products-trading-platform/blob/master/images/echarts.png" alt="image" width="300" height="400" />
+
 
 
 
