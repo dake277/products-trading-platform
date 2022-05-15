@@ -17,7 +17,7 @@
 
 ### 项目截图
 
-<img src="https://github.com/dake277/products-trading-platform/blob/master/images/index.png" alt="image" width="250" height="250" />
+<img src="https://github.com/dake277/products-trading-platform/blob/master/images/index.png" alt="image" width="250" height="300" />
 <img src="https://github.com/dake277/products-trading-platform/blob/master/images/cart.png" alt="image" width="250" height="350" />
 <img src="https://github.com/dake277/products-trading-platform/blob/master/images/detail.png" alt="image" width="250" height="350" />
 <img src="https://github.com/dake277/products-trading-platform/blob/master/images/order.png" alt="image" width="250" height="350" />
